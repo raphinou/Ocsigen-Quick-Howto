@@ -8,6 +8,7 @@
 open Eliom_content
 open Html5.D
 open Eliom_parameter
+open String
 
 (* ************************************************************************** *)
 (* Application                                                                *)
@@ -26,7 +27,7 @@ module Example =
 let main =
   Eliom_service.service
     ~path:[]
-    ~get_params:unit
+    ~get_params:(string "name")
     ()
 
 (* ************************************************************************** *)
@@ -37,9 +38,9 @@ let _ =
 
   Example.register
     ~service:main
-    (fun () () ->
+    (fun name () ->
       Lwt.return
 	(html
-	   (head (title (pcdata "Hello World of Ocsigen")) [])
-	   (body [h1 [pcdata "Hello World!"];
+	   (head (title (pcdata (String.concat " " ["Hello World of Ocsigen";name] ))) [])
+	   (body [h1 [pcdata (String.concat " " ["Hello World of Ocsigen";name] )];
 		  p [pcdata "Welcome to my first Ocsigen website."]])))
