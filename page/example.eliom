@@ -27,7 +27,7 @@ module Example =
 let main =
   Eliom_service.service
     ~path:[]
-    ~get_params:(string "name")
+    ~get_params:(suffix (string "name"))
     ()
 
 (* ************************************************************************** *)
