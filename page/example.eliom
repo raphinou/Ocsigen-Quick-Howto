@@ -24,7 +24,7 @@ module Example =
 (* ************************************************************************** *)
 
 let main =
-  Eliom_service.Http.service
+  Eliom_service.service
     ~path:[]
     ~get_params:unit
     ()
