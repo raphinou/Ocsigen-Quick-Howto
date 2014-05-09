@@ -21,7 +21,7 @@ Do this by calling Eliom_registration.App, which takes a module as argument.
 This argument can be defined with struct ... end
 (http://cseweb.ucsd.edu/classes/sp00/cse231/tutorialeng/node3.html)
 In the module defined, just set the application_name.
-The call to Eliom_registration.App will augment our simple module (whic has
+The call to Eliom_registration.App will augment our simple module (which has
 only the value application_name defined) to make it an application.
 The module defined is assigned to Example, which we will be able to use later
 on.
